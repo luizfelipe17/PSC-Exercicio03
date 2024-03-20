@@ -6,9 +6,10 @@ Calcular e escrever o total (total = quantidade adquirida * preço unitário), o
 - Se quantidade > 10 e quantidade <30, o desconto será de 5%
 - Se quantidade >= 30 o desconto será de 10%
  */
-package psc.exercicio03;
-import java.util.*;
 
+package com.mycompany.pscexercicio03;
+import java.util.*;
+        
 public class Questao07 {
     public static void main (String[] args){
         
@@ -31,27 +32,48 @@ public class Questao07 {
             
             if (qtsAdquirida <= 5){
                 
-                desconto = 0.02;
+                desconto = 2;
                 
-            }else if (qtsAdquirida > 5 && qtsAdquirida <= 10){
+                valorTotal = preco - (preco * (desconto/100));
                 
-                desconto = 0.03;
+                System.out.print("\n\nO produto: "+nome
+                        + "\nO valor sem o desconto será: R$"+preco+"\n");
+                System.out.printf("O desconto será de: %.0f",desconto);
+                System.out.print("%\nO total a pagar será: R$"+valorTotal);
                 
-            }else if (qtsAdquirida > 10 && qtsAdquirida < 30){
+            } else if (qtsAdquirida > 5 && qtsAdquirida <= 10){
                 
-                desconto = 0.05;
+                desconto = 3;
                 
-            }else if (qtsAdquirida >= 30){
+                valorTotal = preco - (preco * (desconto/100));
                 
-                desconto = 0.10;
+                System.out.print("\n\nO produto: "+nome
+                        + "\nO valor sem o desconto será: R$"+preco+"\n");
+                System.out.printf("O desconto será de: %.0f",desconto);
+                System.out.print("%\nO total a pagar será: R$"+valorTotal);
                 
-            }
-            
-            valorTotal = preco - (preco * desconto);
-            
-            System.out.print("O valor sem o desconto será: "+preco+"\n"
-                    + "O desconto será de: "+(desconto*100)+"\n"
-            + "O total a pagar será: "+valorTotal);
-        
-    }
+            } else if (qtsAdquirida > 10 && qtsAdquirida < 30){
+                
+                desconto = 5;
+                
+                valorTotal = preco - (preco * (desconto/100));
+                
+                System.out.print("\n\nO produto: "+nome
+                        + "\nO valor sem o desconto será: R$"+preco+"\n");
+                System.out.printf("O desconto será de: %.0f",desconto);
+                System.out.print("%\nO total a pagar será: R$"+valorTotal);
+                
+            } else if (qtsAdquirida >= 30){
+                
+                desconto = 10;
+                
+                valorTotal = preco - (preco * (desconto/100));
+                
+                System.out.print("\n\nO produto: "+nome
+                        + "\nO valor sem o desconto será: R$"+preco+"\n");
+                System.out.printf("O desconto será de: %.0f",desconto);
+                System.out.print("%\nO total a pagar será: R$"+valorTotal);
+                
+            } 
+    } 
 }
