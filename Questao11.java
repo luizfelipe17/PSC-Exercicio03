@@ -78,6 +78,12 @@ public class Questao11 {
                 
                 return;
                 
+            }else {
+                
+                System.out.print("OPÇÃO INVÁLIDA");
+               
+                return;
+                
             }
         
         }
